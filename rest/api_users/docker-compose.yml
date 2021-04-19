@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+    api:
+        build:
+            context: .
+        container_name: api_rest
+        command: python manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/users
+        ports: 
+            - "8000:8000"
+
+        
