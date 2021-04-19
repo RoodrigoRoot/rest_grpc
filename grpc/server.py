@@ -4,7 +4,7 @@ import grpc
 from concurrent import futures
 
 
-class UserServicer(users_pb2_grpc.UserServicer):
+class UsersServicer(users_pb2_grpc.UserServicer):
 
     def GetUser(self, request, context):
         return users_pb2.UserInfo(
@@ -24,11 +24,11 @@ class Server:
     def run():
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
         users_pb2_grpc.add_UserServicer_to_server(
-            UserServicer(), server
+            UsersServicer(), server
         )
-        server.add_insecure_port('[::]:50050')
+        server.add_insecure_port('[::]:50051')
         server.start()
-        print("running on port 50050")
+        print("running on port 50051")
         server.wait_for_termination()
 
 Server.run()
