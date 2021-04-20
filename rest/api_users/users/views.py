@@ -9,5 +9,5 @@ from rest_framework.response import Response
 class GetUser(APIView):
 
     def get(self, request, *args, **kwargs):
-        user = {"name":"Rodrigo", "last_name":"Urcino", "email":"francisco@miflink.com", "age":25, "phone":7411196882}
+        user = {"name":"Rodrigo", "last_name":"Urcino", "email":"francisco@miflink.com", "age":25}
         return Response(status=HTTP_200_OK, data=user)
