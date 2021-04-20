@@ -1,0 +1,4 @@
+grpcio==1.36.1
+grpcio-tools==1.36.1
+django-grpc==1.0.13
+django==3.2

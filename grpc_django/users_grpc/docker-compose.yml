@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+    api_grpc:
+        build:
+            context: .
+        container_name: api_grpc
+        command: python manage.py grpcserver
+        volumes:
+            - .:/users
+        ports: 
+            - "50051:50051"
+
+        
