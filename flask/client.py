@@ -3,7 +3,7 @@ import users_pb2_grpc
 import grpc
 
 try:
-    channel = grpc.insecure_channel("localhost:50051")
+    channel = grpc.insecure_channel("localhost:50050")
     stub = users_pb2_grpc.UserStub(channel)
     response = stub.GetUser(users_pb2.Empty())
     print(response)
