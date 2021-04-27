@@ -26,9 +26,9 @@ class Server:
         users_pb2_grpc.add_UserServicer_to_server(
             UsersServicer(), server
         )
-        server.add_insecure_port('[::]:50050')
+        server.add_insecure_port('[::]:50049')
         server.start()
-        print("running on port 50050")
+        print("running on port 50049")
         server.wait_for_termination()
 
 Server.run()
