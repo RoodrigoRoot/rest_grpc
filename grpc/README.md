@@ -11,4 +11,4 @@ una vez hecho esto, ya estará nuestro contenedor ejecutandose.
 
 # Stress Test
 
-`ghz  -c 100 -n 1000 --insecure  --proto trading.proto -d '{"company":"74104cea-e9b3-422b-980f-a13fb4ff8fc4"}' --call trading.StockFollow.FollowStock  192.168.100.2:50051`
+`ghz  -c 100 -n 1000 --insecure  --proto users.proto  --call users.User.GetUser  localhost:50050`
